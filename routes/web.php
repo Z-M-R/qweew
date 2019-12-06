@@ -22,3 +22,8 @@ Route::get('/', function (){
 Route::get('/user/adduser','User\LoginController@addUser');
 Route::get('/user/add','User\LoginController@add');
 Route::get('/test/baidu','Test\TestController@baidu');
+
+// 微信开发
+
+Route::get('/wx','WeiXin\WxController@wechat');
+
