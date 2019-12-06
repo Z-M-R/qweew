@@ -11,6 +11,14 @@
 |
 */
 
-Route::get('/', function () {
+Route::get('/', function (){
     return view('welcome');
 });
+
+// Route::get('/info',function(){
+//     // info();
+// });
+
+Route::get('/user/adduser','User\LoginController@addUser');
+Route::get('/user/add','User\LoginController@add');
+Route::get('/test/baidu','Test\TestController@baidu');
