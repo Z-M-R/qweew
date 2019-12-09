@@ -43,10 +43,10 @@ class WxController extends Controller
         $data =date('Y-m-d H:i:s')  . $xml;
         file_put_contents($log_file,$data,FILE_APPEND);   //追加写
     
-        $xml_arr = simplexml_load_string($xml_str);
+        // $xml_arr = simplexml_load_string($xml_str);
 
 
-        // 处理xml数据
+        // // 处理xml数据
         // $xml_obj = simplexml_load_string($xml_str);
 
         // $event = $xml_obj->Event;
