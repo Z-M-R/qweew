@@ -30,6 +30,6 @@ class LoginController extends Controller
 
     public function add()
     {
-        echo "123456都行";
+        echo "服务器123.56.158.49，服务器密码123456abc..";
     }
 }
