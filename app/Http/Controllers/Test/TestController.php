@@ -19,4 +19,24 @@ class TestController extends Controller
         $response = $client->request('GET',$url);
         echo $response->getBody();
     }
+
+
+    public function xmlTest()
+    {
+        // $xml_str = '<xml><ToUserName><![CDATA[gh_9561a4053eb0]]></ToUserName>
+        // <FromUserName><![CDATA[oZ2duw52UsteQMlwJkds6fFviM50]]></FromUserName>
+        // <CreateTime>1575875978</CreateTime>
+        // <MsgType><![CDATA[text]]></MsgType>
+        // <Content><![CDATA[1]]></Content>
+        // <MsgId>22561117032442866</MsgId>
+        // </xml>';
+
+
+        // $xml_obj = simplexml_load_string($xml_str);
+        // echo '<pre>';print_r($xml_obj);echo '</pre>';die;
+        // echo '<pre>';print_r($xml_obj);echo '</pre>'; echo '<hr>';
+
+        // echo 'ToUserName: ' . $xml_obj->ToUserName;echo '</br>';
+        // echo 'FromUserName: ' . $xml_obj->FromUserName;echo '</br>';
+    }
 }
