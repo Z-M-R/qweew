@@ -30,6 +30,6 @@ class LoginController extends Controller
 
     public function add()
     {
-        echo "服务器123.56.158.49，服务器密码123456abc..";
+        echo "服务器：123.56.158.49，服务器密码：123456abc..，域名：weixin1905.zmrzzj.com";
     }
 }
