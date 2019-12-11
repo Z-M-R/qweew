@@ -68,7 +68,6 @@ class WxController extends Controller
 
         // 处理xml数据
         $xml_obj = simplexml_load_string($xml_str);
-
         $event = $xml_obj->Event;   //获取事件类型
         if($event=='subscribe'){
             $openid = $xml_obj->FromUserName;   // 获取用户的openid
@@ -85,6 +84,7 @@ class WxController extends Controller
     
                 //openid 入库
                 $uid = WxUserModel::insertGetId($user_data);
+                var_dump($uid);
                 die;
             }
            
