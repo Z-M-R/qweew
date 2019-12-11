@@ -72,21 +72,36 @@ class WxController extends Controller
         if($event=='subscribe'){
             $openid = $xml_obj->FromUserName;   // 获取用户的openid
             //判断用户是否已存在
-            $u = WxUserModel::where(['openid'=>$openid])->first();
+            $u = WxUserName::where(['openid'=>$openid])->first();
+
             if($u){
-                //TODO 欢迎回来
                 echo "欢迎回来";die;
             }else{
                 $user_data = [
                     'openid' => $openid,
                     'sub_time' => $xml_obj->CreateTime,
                 ];
-    
-                //openid 入库
-                $uid = WxUserModel::insertGetId($user_data);
+
+                $uid = WxUserName::insertGetId($user_data);
                 var_dump($uid);
                 die;
+
             }
+            // $u = WxUserModel::where(['openid'=>$openid])->first();
+            // if($u){
+            //     //TODO 欢迎回来
+            //     echo "欢迎回来";die;
+            // }else{
+            //     $user_data = [
+            //         'openid' => $openid,
+            //         'sub_time' => $xml_obj->CreateTime,
+            //     ];
+    
+            //     //openid 入库
+            //     $uid = WxUserModel::insertGetId($user_data);
+            //     var_dump($uid);
+            //     die;
+            // }
            
 
             //获取用户信息
