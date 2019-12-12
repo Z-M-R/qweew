@@ -85,6 +85,7 @@ class WxController extends Controller
                 //openid 入库
                 $uid = WxUserModel::insertGetId($user_data);
                 var_dump($uid);
+                echo "欢迎关注";
                 die;
             }
            
